@@ -1,0 +1,203 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Descomp/AULA 2/ATV 2/simulation/qsim
+Eaula2
+Z1 w1677176942
+Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
+Z3 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
+Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
+Z5 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z6 DPx6 altera 11 dffeas_pack 0 22 H5F:RRfLz82T3`4>@b7mS3
+Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z10 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
+!i122 4
+R0
+Z11 8Aula2.vho
+Z12 FAula2.vho
+l0
+Z13 L39 1
+VTiLo^:aVBKWoRg0MTE:Yb1
+!s100 >LAz:lSTUCW9MdO3:=<MB3
+Z14 OV;C;2020.1;71
+32
+Z15 !s110 1677176943
+!i10b 1
+Z16 !s108 1677176943.000000
+Z17 !s90 -work|work|Aula2.vho|
+Z18 !s107 Aula2.vho|
+!i113 1
+Z19 o-work work
+Z20 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 5 aula2 0 22 TiLo^:aVBKWoRg0MTE:Yb1
+!i122 4
+l117
+Z21 L49 713
+V[d;Sn=c3T0Rz9T]Fz5CJ<3
+!s100 L@`4`5DdcacHf9?=?o9e]1
+R14
+32
+R15
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R19
+R20
+Eaula2_vhd_vec_tst
+R1
+R8
+R9
+!i122 5
+R0
+Z22 8Waveform.vwf.vht
+Z23 FWaveform.vwf.vht
+l0
+Z24 L32 1
+V9L`]dH9om<z<N8fA7bRZc3
+!s100 Mdd99kFAGMV6mz<X5h@4c2
+R14
+32
+R15
+!i10b 1
+R16
+Z25 !s90 -work|work|Waveform.vwf.vht|
+Z26 !s107 Waveform.vwf.vht|
+!i113 1
+R19
+R20
+Aaula2_arch
+R8
+R9
+DEx4 work 17 aula2_vhd_vec_tst 0 22 9L`]dH9om<z<N8fA7bRZc3
+!i122 5
+l51
+L34 76
+Vc>`5`4D1Yl7k3:^FA1Yl80
+!s100 NN2CFabo4lPbbb6BB?dCF2
+R14
+32
+R15
+!i10b 1
+R16
+R25
+R26
+!i113 1
+R19
+R20
+Eaula3
+Z27 w1677865783
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+!i122 10
+Z28 dC:/Insper/6/DesComp/Aula 3/simulation/qsim
+Z29 8Aula3.vho
+Z30 FAula3.vho
+l0
+R13
+V32Qdl;@iD]d7_ahRj1jnD3
+!s100 kH8DlEI?QTeGN?@?>Q4Ai0
+R14
+32
+Z31 !s110 1677865784
+!i10b 1
+Z32 !s108 1677865783.000000
+Z33 !s90 -work|work|Aula3.vho|
+Z34 !s107 Aula3.vho|
+!i113 1
+R19
+R20
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 5 aula3 0 22 32Qdl;@iD]d7_ahRj1jnD3
+!i122 10
+l116
+R21
+V:TOTXZ[Jig?f4eA;iUecd2
+!s100 ;TT5;[7`DK3?<]N8Hlo@>3
+R14
+32
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R19
+R20
+Eaula3_vhd_vec_tst
+Z35 w1677865782
+R8
+R9
+!i122 11
+R28
+Z36 8Waveform2.vwf.vht
+Z37 FWaveform2.vwf.vht
+l0
+R24
+VlB6Abc2HDL?XlOc55`[BT3
+!s100 ?WX?I8BD?OP;LOEH;;2S>0
+R14
+32
+R31
+!i10b 1
+Z38 !s108 1677865784.000000
+Z39 !s90 -work|work|Waveform2.vwf.vht|
+!s107 Waveform2.vwf.vht|
+!i113 1
+R19
+R20
+Aaula3_arch
+R8
+R9
+Z40 DEx4 work 17 aula3_vhd_vec_tst 0 22 lB6Abc2HDL?XlOc55`[BT3
+!i122 11
+l51
+L34 83
+VFDE@5MfDXmUaHG4?ho=WP0
+!s100 lUoTda3>@?n0<BlPHKfkM3
+R14
+32
+R31
+!i10b 1
+R38
+R39
+Z41 !s107 Waveform2.vwf.vht|
+!i113 1
+R19
+R20
