@@ -19,9 +19,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "02/23/2023 15:29:02"
+-- Generated on "03/10/2023 11:39:55"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          Aula2
+-- Vhdl Test Bench(with test vectors) for design  :          Aula4
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -29,9 +29,9 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY Aula2_vhd_vec_tst IS
-END Aula2_vhd_vec_tst;
-ARCHITECTURE Aula2_arch OF Aula2_vhd_vec_tst IS
+ENTITY Aula4_vhd_vec_tst IS
+END Aula4_vhd_vec_tst;
+ARCHITECTURE Aula4_arch OF Aula4_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL CLOCK_50 : STD_LOGIC;
@@ -39,24 +39,27 @@ SIGNAL KEY : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL LEDR : STD_LOGIC_VECTOR(9 DOWNTO 0);
 SIGNAL PC_OUT : STD_LOGIC_VECTOR(2 DOWNTO 0);
 SIGNAL SW : STD_LOGIC_VECTOR(9 DOWNTO 0);
-COMPONENT Aula2
+SIGNAL testeOut : STD_LOGIC_VECTOR(7 DOWNTO 0);
+COMPONENT Aula4
 	PORT (
 	CLOCK_50 : IN STD_LOGIC;
 	KEY : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	LEDR : BUFFER STD_LOGIC_VECTOR(9 DOWNTO 0);
-	PC_OUT : BUFFER STD_LOGIC_VECTOR(2 DOWNTO 0);
-	SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0)
+	LEDR : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+	PC_OUT : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+	SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+	testeOut : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
-	i1 : Aula2
+	i1 : Aula4
 	PORT MAP (
 -- list connections between master ports and signals
 	CLOCK_50 => CLOCK_50,
 	KEY => KEY,
 	LEDR => LEDR,
 	PC_OUT => PC_OUT,
-	SW => SW
+	SW => SW,
+	testeOut => testeOut
 	);
 
 -- KEY[0]
@@ -64,46 +67,17 @@ t_prcs_KEY_0: PROCESS
 BEGIN
 	KEY(0) <= '1';
 	WAIT FOR 40000 ps;
-	FOR i IN 1 TO 5
+	KEY(0) <= '0';
+	WAIT FOR 20000 ps;
+	KEY(0) <= '1';
+	WAIT FOR 20000 ps;
+	FOR i IN 1 TO 23
 	LOOP
 		KEY(0) <= '0';
-		WAIT FOR 40000 ps;
+		WAIT FOR 20000 ps;
 		KEY(0) <= '1';
-		WAIT FOR 40000 ps;
+		WAIT FOR 20000 ps;
 	END LOOP;
-	KEY(0) <= '0';
 WAIT;
 END PROCESS t_prcs_KEY_0;
-
--- SW[9]
-t_prcs_SW_9: PROCESS
-BEGIN
-	SW(9) <= '0';
-WAIT;
-END PROCESS t_prcs_SW_9;
-
--- SW[8]
-t_prcs_SW_8: PROCESS
-BEGIN
-	SW(8) <= '0';
-	WAIT FOR 330000 ps;
-	SW(8) <= '1';
-WAIT;
-END PROCESS t_prcs_SW_8;
-
--- SW[7]
-t_prcs_SW_7: PROCESS
-BEGIN
-	SW(7) <= '1';
-	WAIT FOR 330000 ps;
-	SW(7) <= '0';
-WAIT;
-END PROCESS t_prcs_SW_7;
-
--- SW[6]
-t_prcs_SW_6: PROCESS
-BEGIN
-	SW(6) <= '0';
-WAIT;
-END PROCESS t_prcs_SW_6;
-END Aula2_arch;
+END Aula4_arch;

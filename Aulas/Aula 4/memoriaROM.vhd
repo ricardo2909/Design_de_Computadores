@@ -25,17 +25,21 @@ architecture assincrona of memoriaROM is
   constant LDA  : std_logic_vector(3 downto 0) := "0001";
   constant SOMA : std_logic_vector(3 downto 0) := "0010";
   constant SUB  : std_logic_vector(3 downto 0) := "0011";
-  constant CLRA : std_logic_vector(3 downto 0) := "1111";
+  constant LDI  : std_logic_vector(3 downto 0) := "0100";
+  constant STA  : std_logic_vector(3 downto 0) := "0101";
+
 		  
 		  
   begin
       -- Palavra de Controle = SelMUX, Habilita_A, Reset_A, Operacao_ULA
       -- Inicializa os endereços:
-        tmp(0)  := CLRA;   -- Desta posicao para baixo, é necessário acertar os valores
-        tmp(1)  := SOMA;
-        tmp(2)  := SOMA;
-        tmp(3)  := SOMA;
-        tmp(4)  := SUB;
+        tmp(0)  := LDI  & "000000100";   -- LDI  4
+        tmp(1)  := STA  & "100000001";   -- STA  @257
+        tmp(2)  := LDI  & "000000011";   -- LDI  3
+        tmp(3)  := STA  & "100000000";   -- STA  @256
+        tmp(4)  := SOMA & "100000000";   -- SOMA @256
+		  tmp(5)  := SOMA & "100000000";   -- SOMA @256
+		  tmp(6)  := SUB  & "100000001";   -- SUB  @257
         return tmp;
     end initMemory;
 

@@ -25,19 +25,19 @@ R0
 Z11 8Aula2.vho
 Z12 FAula2.vho
 l0
-L39 1
+Z13 L39 1
 VTiLo^:aVBKWoRg0MTE:Yb1
 !s100 >LAz:lSTUCW9MdO3:=<MB3
-Z13 OV;C;2020.1;71
+Z14 OV;C;2020.1;71
 32
-Z14 !s110 1677176943
+Z15 !s110 1677176943
 !i10b 1
-Z15 !s108 1677176943.000000
-Z16 !s90 -work|work|Aula2.vho|
-Z17 !s107 Aula2.vho|
+Z16 !s108 1677176943.000000
+Z17 !s90 -work|work|Aula2.vho|
+Z18 !s107 Aula2.vho|
 !i113 1
-Z18 o-work work
-Z19 tExplicit 1 CvgOpt 0
+Z19 o-work work
+Z20 tExplicit 1 CvgOpt 0
 Astructure
 R2
 R3
@@ -54,54 +54,150 @@ l117
 L49 713
 V[d;Sn=c3T0Rz9T]Fz5CJ<3
 !s100 L@`4`5DdcacHf9?=?o9e]1
-R13
-32
 R14
-!i10b 1
+32
 R15
+!i10b 1
 R16
 R17
-!i113 1
 R18
+!i113 1
 R19
+R20
 Eaula2_vhd_vec_tst
 R1
 R8
 R9
 !i122 5
 R0
-Z20 8Waveform.vwf.vht
-Z21 FWaveform.vwf.vht
+Z21 8Waveform.vwf.vht
+Z22 FWaveform.vwf.vht
 l0
-L32 1
+Z23 L32 1
 V9L`]dH9om<z<N8fA7bRZc3
 !s100 Mdd99kFAGMV6mz<X5h@4c2
-R13
-32
 R14
-!i10b 1
+32
 R15
-Z22 !s90 -work|work|Waveform.vwf.vht|
-Z23 !s107 Waveform.vwf.vht|
+!i10b 1
+R16
+Z24 !s90 -work|work|Waveform.vwf.vht|
+Z25 !s107 Waveform.vwf.vht|
 !i113 1
-R18
 R19
+R20
 Aaula2_arch
 R8
 R9
-Z24 DEx4 work 17 aula2_vhd_vec_tst 0 22 9L`]dH9om<z<N8fA7bRZc3
+DEx4 work 17 aula2_vhd_vec_tst 0 22 9L`]dH9om<z<N8fA7bRZc3
 !i122 5
 l51
 L34 76
 Vc>`5`4D1Yl7k3:^FA1Yl80
 !s100 NN2CFabo4lPbbb6BB?dCF2
-R13
-32
 R14
-!i10b 1
+32
 R15
-R22
-R23
+!i10b 1
+R16
+R24
+R25
 !i113 1
-R18
 R19
+R20
+Eaula4
+Z26 w1678459195
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+!i122 30
+Z27 dC:/Insper/6/DesComp/Aula 4/simulation/qsim
+Z28 8Aula4.vho
+Z29 FAula4.vho
+l0
+R13
+VVFcalK:ODdz7CKD6cg_lc1
+!s100 fIjJE<1>KUE]]^cmnT95O0
+R14
+32
+Z30 !s110 1678459196
+!i10b 1
+Z31 !s108 1678459196.000000
+Z32 !s90 -work|work|Aula4.vho|
+Z33 !s107 Aula4.vho|
+!i113 1
+R19
+R20
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 5 aula4 0 22 VFcalK:ODdz7CKD6cg_lc1
+!i122 30
+l201
+L50 1642
+V]Y1^`OF]FFi43EMg;m:=O3
+!s100 TnVF^7SD:5[eRkj4BM[>82
+R14
+32
+R30
+!i10b 1
+R31
+R32
+R33
+!i113 1
+R19
+R20
+Eaula4_vhd_vec_tst
+R26
+R8
+R9
+!i122 31
+R27
+R21
+R22
+l0
+R23
+VcG9B@0gcbm^4]GJeS3A]]1
+!s100 Z1nYh`E1lo5g?[1GRCT`]2
+R14
+32
+R30
+!i10b 1
+R31
+R24
+R25
+!i113 1
+R19
+R20
+Aaula4_arch
+R8
+R9
+Z34 DEx4 work 17 aula4_vhd_vec_tst 0 22 cG9B@0gcbm^4]GJeS3A]]1
+!i122 31
+l53
+Z35 L34 50
+Z36 VQF44g;dfkQW?YTlbRWBb;1
+Z37 !s100 <kK`jj`H3:[;BHNb[mecS3
+R14
+32
+R30
+!i10b 1
+R31
+R24
+R25
+!i113 1
+R19
+R20
