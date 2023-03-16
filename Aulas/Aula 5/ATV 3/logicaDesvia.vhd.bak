@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity logicaDesvio is
+  port ( JEQ : in std_logic;
+  Flag_Igual : in std_logic;
+  JMP        : in std_logic;
+         saida : out std_logic
+  );
+end entity;
+
+architecture comportamento of logicaDesvio is
+
+  begin
+saida <= '1' when (JMP = '1') or (JEQ = '1' and Flag_igual = '1')
+			else '0'
+end architecture;
