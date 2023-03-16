@@ -8,7 +8,7 @@ entity Aula5 is
         simulacao : boolean := TRUE -- para gravar na placa, altere de TRUE para FALSE
   );
   port   (
-	 palavra_controle : out std_logic_vector (8 downto 0);
+	 palavra_controle : out std_logic_vector (11 downto 0);
     CLOCK_50 : in std_logic;
     KEY: in std_logic_vector(3 downto 0);
     SW: in std_logic_vector(9 downto 0);
@@ -26,7 +26,7 @@ architecture arquitetura of Aula5 is
   signal MUX_REG1 : std_logic_vector (larguraDados-1 downto 0);
   signal DadoOut : std_logic_vector (larguraDados-1 downto 0);
   signal Saida_ULA : std_logic_vector (larguraDados-1 downto 0);
-  signal Sinais_Controle : std_logic_vector (8 downto 0);
+  signal Sinais_Controle : std_logic_vector (11 downto 0);
   signal Endereco : std_logic_vector (8 downto 0);
   signal proxPC : std_logic_vector (8 downto 0);
   signal Mux_PC : std_logic_vector (8 downto 0);
@@ -44,7 +44,12 @@ architecture arquitetura of Aula5 is
   signal SaidaRegFlag: std_logic;
   signal JEQ: std_logic;
   signal habFlagIgual: std_logic;
-  signal saidaDesv: std_logic;
+  signal saidaDesv: std_logic_vector (1 downto 0);
+  signal saidaRET: std_logic_vector (8 downto 0);
+  signal habEscritaRetorno: std_logic;
+  signal RET: std_logic;
+  signal JSR: std_logic;
+  
 
 begin
 
@@ -65,15 +70,20 @@ MUX1 :  entity work.muxGenerico2x1  generic map (larguraDados => larguraDados)
                  seletor_MUX => SelMUX,
                  saida_MUX => MUX_REG1);
 
-MUX2 : entity work.muxGenerico2x1  generic map (larguraDados => 9)
-        port map(entradaA_MUX => proxPC,
-                 entradaB_MUX =>  Memoria_Decoder (8 downto 0),
+MUX2 : entity work.muxGenerico4x1  generic map (larguraDados => 9)
+        port map(entrada0_MUX => proxPC,
+                 entrada1_MUX => Memoria_Decoder (8 downto 0),
+					  entrada2_MUX => saidaRET,
+					  entrada3_MUX => "000000000", 
                  seletor_MUX => saidaDesv,
                  saida_MUX => Mux_PC);
 
 -- O port map completo do Acumulador.
 REGA : entity work.registradorGenerico   generic map (larguraDados => larguraDados)
           port map (DIN => Saida_ULA, DOUT => DadoOut, ENABLE => Habilita_A, CLK => CLK, RST => '0');
+			 
+ENDRET : entity work.registradorGenerico   generic map (larguraDados => 9)
+          port map (DIN => proxPC, DOUT => saidaRET, ENABLE => habEscritaRetorno, CLK => CLK, RST => '0');
 
 -- O port map completo do Program Counter.3	
 PC : entity work.registradorGenerico   generic map (larguraDados => 9)
@@ -96,30 +106,34 @@ DECO : entity work.decoderInstru
 
 RAM : entity work.memoriaRAM   generic map (dataWidth => 8, addrWidth => 8)
           port map (addr => Memoria_Decoder (7 downto 0),  we => Sinais_Controle (0), 
-			 re => Sinais_Controle(1),
-          habilita => Memoria_Decoder (8),
-          clk => CLK,
-          dado_in => DadoOut,
-          dado_out => DataIn);
+						  re => Sinais_Controle(1),
+						  habilita => Memoria_Decoder (8),
+						  clk => CLK,
+						  dado_in => DadoOut,
+						  dado_out => DataIn);
 
 FLAG1 : entity work.FlipFlop
 		  port map (DIN => flagSaidaUla,
-				  DOUT => SaidaRegFlag,
-			     ENABLE => habFlagIgual,
-				  CLK => CLK,
-				  RST => '0');
+					   DOUT => SaidaRegFlag,
+					   ENABLE => habFlagIgual,
+						CLK => CLK,
+						RST => '0');
 				 
-DESVIO : entity work.logicaDesvio 
+DESVIO : entity work.logicaDesvia 
 			port map( JEQ => JEQ,
-					 Flag_Igual  => SaidaRegFlag,
-					 JMP => JMP,
-					 saida => saidaDesv
+						 Flag_Igual  => SaidaRegFlag,
+						 JMP => JMP,
+						 RET => RET,
+						 JSR => JSR,
+						 saida => saidaDesv
   );
 
   
 
-
-JMP <= Sinais_Controle(8);
+habEscritaRetorno <= Sinais_controle(11);
+JMP <= Sinais_Controle(10);
+RET <= Sinais_Controle(9);
+JSR <= Sinais_Controle(8);
 JEQ <= Sinais_controle(7);
 selMUX <= Sinais_Controle(6);
 Habilita_A <= Sinais_Controle(5);
@@ -131,18 +145,6 @@ palavra_controle <= Sinais_Controle;
 
 
 
--- I/O
---chavesY_MUX_A <= SW(3 downto 0);
---chavesX_ULA_B <= SW(9 downto 6);
-
--- A ligacao dos LEDs:
---LEDR (9) <= SelMUX;
---LEDR (8) <= Habilita_A;
---LEDR (7) <= Reset_A;
---LEDR (6) <= Operacao_ULA;
---LEDR (5) <= '0';    -- Apagado.
---LEDR (4) <= '0';    -- Apagado.
---LEDR (3 downto 0) <= REG1_ULA_A;
 
 PC_OUT <= Endereco;
 

@@ -1,0 +1,27 @@
+Quartus Prime Archive log --	C:/Insper/6/DesComp/Aula 5/ATV 3/Aula5.qarlog
+
+Archive:	C:/Insper/6/DesComp/Aula 5/ATV 3/Aula5.qar
+Date:		Thu Mar 16 17:08:15 2023
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Insper/6/DesComp/Aula 5/ATV 3/Aula5.qpf
+C:/Insper/6/DesComp/Aula 5/ATV 3/Aula5.qsf
+C:/Insper/6/DesComp/Aula 5/ATV 3/Aula5.vhd
+C:/Insper/6/DesComp/Aula 5/ATV 3/FlipFlop.vhd
+C:/Insper/6/DesComp/Aula 5/ATV 3/ULASomaSub.vhd
+C:/Insper/6/DesComp/Aula 5/ATV 3/Waveform.vwf
+C:/Insper/6/DesComp/Aula 5/ATV 3/decoderInstru.vhd
+C:/Insper/6/DesComp/Aula 5/ATV 3/edgeDetector.vhd
+C:/Insper/6/DesComp/Aula 5/ATV 3/logicaDesvia.vhd
+C:/Insper/6/DesComp/Aula 5/ATV 3/memoriaRAM.vhd
+C:/Insper/6/DesComp/Aula 5/ATV 3/memoriaROM.vhd
+C:/Insper/6/DesComp/Aula 5/ATV 3/muxGenerico2x1.vhd
+C:/Insper/6/DesComp/Aula 5/ATV 3/muxGenerico4x1.vhd
+C:/Insper/6/DesComp/Aula 5/ATV 3/registradorGenerico.vhd
+C:/Insper/6/DesComp/Aula 5/ATV 3/somaConstante.vhd
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 16 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

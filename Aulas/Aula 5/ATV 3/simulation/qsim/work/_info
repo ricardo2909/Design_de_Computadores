@@ -202,7 +202,7 @@ R25
 R19
 R20
 Eaula5
-Z34 w1678909742
+Z34 w1678997108
 R2
 R3
 R4
@@ -212,19 +212,19 @@ R7
 R8
 R9
 R10
-!i122 24
-Z35 dC:/Insper/6/DesComp/Aula 5/ATV 2/simulation/qsim
+!i122 32
+Z35 dC:/Insper/6/DesComp/Aula 5/ATV 3/simulation/qsim
 Z36 8Aula5.vho
 Z37 FAula5.vho
 l0
 R13
-Voz1F?_3Daa3g0b^XLRcKz2
-!s100 >H5:boi6D[l28<QTB7?Wf1
+V9^f_NZeLWca2kmG4KT4>o0
+!s100 RBBOUzcB_onD[nc^BmMHG3
 R14
 32
-Z38 !s110 1678909743
+Z38 !s110 1678997108
 !i10b 1
-Z39 !s108 1678909743.000000
+Z39 !s108 1678997108.000000
 Z40 !s90 -work|work|Aula5.vho|
 Z41 !s107 Aula5.vho|
 !i113 1
@@ -240,12 +240,12 @@ R7
 R8
 R9
 R10
-DEx4 work 5 aula5 0 22 oz1F?_3Daa3g0b^XLRcKz2
-!i122 24
-l272
-L50 2691
-VUQde]<?[T[Xd4<EPZULII2
-!s100 17>hda3BRdHM=m@9:BVCI2
+DEx4 work 5 aula5 0 22 9^f_NZeLWca2kmG4KT4>o0
+!i122 32
+l384
+L50 3695
+V;4j5>LAKfIbnk>VZK>LgC1
+!s100 3:=e@LP[>aneSSf[<1KG^3
 R14
 32
 R38
@@ -257,43 +257,43 @@ R41
 R19
 R20
 Eaula5_vhd_vec_tst
-Z42 w1678909741
+Z42 w1678997107
 R8
 R9
-!i122 25
+!i122 33
 R35
-Z43 8Waveform1.vwf.vht
-Z44 FWaveform1.vwf.vht
+R21
+R22
 l0
 R23
 V1Rl8z<K:bknBb]CAkkFG[1
 !s100 ]_PmX`MP:THU@a4bMSN1Q3
 R14
 32
-R38
+Z43 !s110 1678997109
 !i10b 1
 R39
-Z45 !s90 -work|work|Waveform1.vwf.vht|
-!s107 Waveform1.vwf.vht|
+R24
+R25
 !i113 1
 R19
 R20
 Aaula5_arch
 R8
 R9
-Z46 DEx4 work 17 aula5_vhd_vec_tst 0 22 1Rl8z<K:bknBb]CAkkFG[1
-!i122 25
+Z44 DEx4 work 17 aula5_vhd_vec_tst 0 22 1Rl8z<K:bknBb]CAkkFG[1
+!i122 33
 l53
-Z47 L34 47
-Vn?bfQP]V=SQ]2ECFb3Aog2
-!s100 QGfGND]Jhz@nC2MeaXnok3
+Z45 L34 47
+V=XCon3LoJLPcMLTPWMGLj3
+!s100 4:;EW3_<lo7Ea]YcPIFXE2
 R14
 32
-R38
+R43
 !i10b 1
 R39
-R45
-Z48 !s107 Waveform1.vwf.vht|
+R24
+R25
 !i113 1
 R19
 R20

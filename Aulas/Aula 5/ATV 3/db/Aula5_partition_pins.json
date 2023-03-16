@@ -36,6 +36,18 @@
 					"strict" : false
 				},
 				{
+					"name" : "palavra_controle[9]",
+					"strict" : false
+				},
+				{
+					"name" : "palavra_controle[10]",
+					"strict" : false
+				},
+				{
+					"name" : "palavra_controle[11]",
+					"strict" : false
+				},
+				{
 					"name" : "PC_OUT[0]",
 					"strict" : false
 				},

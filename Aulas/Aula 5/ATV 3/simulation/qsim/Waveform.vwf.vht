@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "03/15/2023 14:00:13"
+-- Generated on "03/16/2023 17:05:07"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          Aula5
 -- 
@@ -37,17 +37,17 @@ ARCHITECTURE Aula5_arch OF Aula5_vhd_vec_tst IS
 SIGNAL CLOCK_50 : STD_LOGIC;
 SIGNAL KEY : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL LEDR : STD_LOGIC_VECTOR(9 DOWNTO 0);
+SIGNAL palavra_controle : STD_LOGIC_VECTOR(11 DOWNTO 0);
 SIGNAL PC_OUT : STD_LOGIC_VECTOR(8 DOWNTO 0);
 SIGNAL SW : STD_LOGIC_VECTOR(9 DOWNTO 0);
-SIGNAL testeOut : STD_LOGIC_VECTOR(8 DOWNTO 0);
 COMPONENT Aula5
 	PORT (
 	CLOCK_50 : IN STD_LOGIC;
 	KEY : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 	LEDR : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+	palavra_controle : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
 	PC_OUT : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
-	SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-	testeOut : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
+	SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
@@ -57,9 +57,9 @@ BEGIN
 	CLOCK_50 => CLOCK_50,
 	KEY => KEY,
 	LEDR => LEDR,
+	palavra_controle => palavra_controle,
 	PC_OUT => PC_OUT,
-	SW => SW,
-	testeOut => testeOut
+	SW => SW
 	);
 
 -- KEY[0]
