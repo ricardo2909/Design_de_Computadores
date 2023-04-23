@@ -1,220 +1,220 @@
-Reset:
-STA @510
-STA @511
-STA @509
-LDI $0
-STA @0
-STA @258
-STA @257
-STA @256
-STA @288
-STA @289
-STA @290
-STA @291
-STA @292
-STA @293
-STA @63
-STA @62
-STA @61
-STA @60
-STA @59
-STA @58
-STA @2
-STA @3
-STA @4
-STA @5
-STA @6
-STA @7
-LDI $1
-STA @1
-LDI $10
-STA @10
-Inicio:
-LDA @353
-CEQ @0
-JEQ @Inicio
-JSR @Limite
-LDA @0
-STA @288
-STA @289
-STA @290
-STA @291
-STA @292
-STA @293
-STA @510
-Contador:
-NOP
-LDA @352
-CEQ @0
-JEQ @LOOP
-JSR @Incrementa
-NOP
-LDA @2
-STA @288
-LDA @3
-STA @289
-LDA @4
-STA @290
-LDA @5
-STA @291
-LDA @6
-STA @292
-LDA @7
-STA @293
-JSR @Comparador
-LOOP:
-JMP @Contador
-Limite:
-STA @510
-Unidade:
-LDA @320
-STA @288
-LDA @353
-CEQ @0
-JEQ @Unidade
-STA @510
-LDA @320
-STA @63
-Dezena:
-LDA @320
-STA @289
-LDA @353
-CEQ @0
-JEQ @Dezena
-STA @510
-LDA @320
-STA @62
-Centena:
-LDA @320
-STA @290
-LDA @353
-CEQ @0
-JEQ @Centena
-STA @510
-LDA @320
-STA @61
-Milhar:
-LDA @320
-STA @291
-LDA @353
-CEQ @0
-JEQ @Milhar
-STA @510
-LDA @320
-STA @60
-DezMilhar:
-LDA @320
-STA @292
-LDA @353
-CEQ @0
-JEQ @DezMilhar
-STA @510
-LDA @320
-STA @59
-CenMilhar:
-LDA @320
-STA @293
-LDA @353
-CEQ @0
-JEQ @CenMilhar
-STA @510
-LDA @320
-STA @58
-RET
-Incrementa:
-STA @511
-LDA @2
-SOMA @1
-CEQ @10
-JEQ @Dez
-STA @2
-RET
-Dez:
-LDA @0
-STA @2
-LDA @3
-SOMA @1
-CEQ @10
-JEQ @Cen
-STA @3
-RET
-Cen:
-LDA @0
-STA @3
-LDA @4
-SOMA @1
-CEQ @10
-JEQ @Mil
-STA @4
-RET
-Mil:
-LDA @0
-STA @4
-LDA @5
-SOMA @1
-CEQ @10
-JEQ @DezM
-STA @5
-RET
-DezM:
-LDA @0
-STA @5
-LDA @6
-SOMA @1
-CEQ @10
-JEQ @CenM
-STA @6
-RET
-CenM:
-LDA @0
-STA @6
-LDA @7
-SOMA @1
-CEQ @10
-JEQ @Fim
-STA @7
-RET
-Fim:
-LDA @0
-STA @7
-RET
-Comparador:
-LDA @63
-CEQ @2
-JEQ @CompDez
-RET
-CompDez:
-LDA @62
-CEQ @3
-JEQ @CompCen
-RET
-CompCen:
-LDA @61
-CEQ @4
-JEQ @CompMil
-RET
-CompMil:
-LDA @60
-CEQ @5
-JEQ @CompDezM
-RET
-CompDezM:
-LDA @59
-CEQ @6
-JEQ @CompCenM
-RET
-CompCenM:
-LDA @58
-CEQ @7
-JEQ @Acabou
-RET
-Acabou:
-LDI @1
-STA @258
-STA @257
-LDI $255
-STA @256
-LDA @356
-CEQ @0
-JEQ @Acabou
-JMP @Reset
+Reset:                         #Reset
+STA @510                       #Reset do KEY1
+STA @511                       #Reset do KEY0
+STA @509                       #Reset do Botao do Reset
+LDI $0                         #Carrega o valor 0 no Registrador
+STA @0                         #Armazena o valor 0 na posicao 0 da memoria
+STA @258                       #Apaga o LED 9
+STA @257                       #Apaga o LED 8   
+STA @256                       #Apaga os LEDs 7 ate 0
+STA @288                       #Armazena o valor 0 no HEX0
+STA @289                       #Armazena o valor 0 no HEX1
+STA @290                       #Armazena o valor 0 no HEX2
+STA @291                       #Armazena o valor 0 no HEX3
+STA @292                       #Armazena o valor 0 no HEX4
+STA @293                       #Armazena o valor 0 no HEX5
+STA @63                        #Armazena o valor 0 na posicao 63 da memoria
+STA @62                        #Armazena o valor 0 na posicao 62 da memoria
+STA @61                        #Armazena o valor 0 na posicao 61 da memoria
+STA @60                        #Armazena o valor 0 na posicao 60 da memoria
+STA @59                        #Armazena o valor 0 na posicao 59 da memoria
+STA @58                        #Armazena o valor 0 na posicao 58 da memoria
+STA @2                         #Armazena o valor 0 na posicao 2 da memoria
+STA @3                         #Armazena o valor 0 na posicao 3 da memoria
+STA @4                         #Armazena o valor 0 na posicao 4 da memoria
+STA @5                         #Armazena o valor 0 na posicao 5 da memoria
+STA @6                         #Armazena o valor 0 na posicao 6 da memoria
+STA @7                         #Armazena o valor 0 na posicao 7 da memoria
+LDI $1                         #Carrega o valor 1 no Registrador
+STA @1                         #Armazena o valor 1 na posicao 1 da memoria
+LDI $10                        #Carrega o valor 10 no Registrador
+STA @10                        #Armazena o valor 10 na posicao 10 da memoria
+Inicio:                        #Label de inicio
+LDA @353                       #Carrega o valor do KEY1
+CEQ @0                         #Compara o valor do KEY1 com 0
+JEQ @Inicio                    #Se o valor do KEY1 for 0, volta para o inicio
+JSR @Limite                    #Se o valor do KEY1 for diferente de 0, chama a Sub rotina Limite
+LDA @0                         #Carrega o valor 0 no Registrador
+STA @288                       #Armazena o valor 0 no HEX0
+STA @289                       #Armazena o valor 0 no HEX1
+STA @290                       #Armazena o valor 0 no HEX2
+STA @291                       #Armazena o valor 0 no HEX3
+STA @292                       #Armazena o valor 0 no HEX4
+STA @293                       #Armazena o valor 0 no HEX5
+STA @511                       #Reset do KEY0
+Contador:                      #Label do Contador
+NOP                            #NOP
+LDA @352                       #Carrega o valor do KEY0
+CEQ @0                         #Compara o valor do KEY0 com 0
+JEQ @LOOP                      #Se o valor do KEY0 for 0, vai para a label LOOP
+JSR @Incrementa                #Se o valor do KEY0 for diferente de 0, chama a Sub rotina Incrementa
+NOP                            #NOP
+LDA @2                         #Carrega o valor da posicao 2 da memoria no Registrador
+STA @288                       #Armazena o valor da posicao 2 da memoria no HEX0
+LDA @3                         #Carrega o valor da posicao 3 da memoria no Registrador
+STA @289                       #Armazena o valor da posicao 3 da memoria no HEX1
+LDA @4                         #Carrega o valor da posicao 4 da memoria no Registrador
+STA @290                       #Armazena o valor da posicao 4 da memoria no HEX2
+LDA @5                         #Carrega o valor da posicao 5 da memoria no Registrador
+STA @291                       #Armazena o valor da posicao 5 da memoria no HEX3
+LDA @6                         #Carrega o valor da posicao 6 da memoria no Registrador
+STA @292                       #Armazena o valor da posicao 6 da memoria no HEX4
+LDA @7                         #Carrega o valor da posicao 7 da memoria no Registrador
+STA @293                       #Armazena o valor da posicao 7 da memoria no HEX5
+JSR @Comparador                #Chama a Sub rotina Comparador
+LOOP:                          #Label LOOP
+JMP @Contador                  #Volta para a label Contador
+Limite:                        #Label Limite
+STA @510                       #Reset do KEY1
+Unidade:                       #Label Unidade
+LDA @320                       #Carrega o valor das chaves SW (0 - 7) no Registrador
+STA @288                       #Armazena o valor das chaves SW (0 - 7) no HEX0
+LDA @353                       #Carrega o valor do KEY1 
+CEQ @0                         #Compara o valor do KEY1 com 0
+JEQ @Unidade                   #Se o valor do KEY1 for 0, volta para a label Unidade
+STA @510                       #Reset do KEY1
+LDA @320                       #Carrega o valor das chaves SW (0 - 7) no Registrador
+STA @63                        #Armazena o valor das chaves SW (0 - 7) na posicao 63 da memoria
+Dezena:                        #Label Dezena
+LDA @320                       #Carrega o valor das chaves SW (0 - 7) no Registrador
+STA @289                       #Armazena o valor das chaves SW (0 - 7) no HEX1
+LDA @353                       #Carrega o valor do KEY1
+CEQ @0                         #Compara o valor do KEY1 com 0
+JEQ @Dezena                    #Se o valor do KEY1 for 0, volta para a label Dezena
+STA @510                       #Reset do KEY1
+LDA @320                       #Carrega o valor das chaves SW (0 - 7) no Registrador
+STA @62                        #Armazena o valor das chaves SW (0 - 7) na posicao 62 da memoria
+Centena:                       #Label Centena
+LDA @320                       #Carrega o valor das chaves SW (0 - 7) no Registrador
+STA @290                       #Armazena o valor das chaves SW (0 - 7) no HEX2
+LDA @353                       #Carrega o valor do KEY1
+CEQ @0                         #Compara o valor do KEY1 com 0
+JEQ @Centena                   #Se o valor do KEY1 for 0, volta para a label Centena
+STA @510                       #Reset do KEY1
+LDA @320                       #Carrega o valor das chaves SW (0 - 7) no Registrador
+STA @61                        #Armazena o valor das chaves SW (0 - 7) na posicao 61 da memoria
+Milhar:                        #Label Milhar
+LDA @320                       #Carrega o valor das chaves SW (0 - 7) no Registrador
+STA @291                       #Armazena o valor das chaves SW (0 - 7) no HEX3
+LDA @353                       #Carrega o valor do KEY1
+CEQ @0                         #Compara o valor do KEY1 com 0
+JEQ @Milhar                    #Se o valor do KEY1 for 0, volta para a label Milhar
+STA @510                       #Reset do KEY1
+LDA @320                       #Carrega o valor das chaves SW (0 - 7) no Registrador
+STA @60                        #Armazena o valor das chaves SW (0 - 7) na posicao 60 da memoria
+DezMilhar:                     #Label DezMilhar
+LDA @320                       #Carrega o valor das chaves SW (0 - 7) no Registrador
+STA @292                       #Armazena o valor das chaves SW (0 - 7) no HEX4
+LDA @353                       #Carrega o valor do KEY1
+CEQ @0                         #Compara o valor do KEY1 com 0 
+JEQ @DezMilhar                 #Se o valor do KEY1 for 0, volta para a label DezMilhar
+STA @510                       #Reset do KEY1
+LDA @320                       #Carrega o valor das chaves SW (0 - 7) no Registrador
+STA @59                        #Armazena o valor das chaves SW (0 - 7) na posicao 59 da memoria
+CenMilhar:                     #Label CenMilhar
+LDA @320                       #Carrega o valor das chaves SW (0 - 7) no Registrador
+STA @293                       #Armazena o valor das chaves SW (0 - 7) no HEX5
+LDA @353                       #Carrega o valor do KEY1
+CEQ @0                         #Compara o valor do KEY1 com 0
+JEQ @CenMilhar                 #Se o valor do KEY1 for 0, volta para a label CenMilhar
+STA @510                       #Reset do KEY1
+LDA @320                       #Carrega o valor das chaves SW (0 - 7) no Registrador
+STA @58                        #Armazena o valor das chaves SW (0 - 7) na posicao 58 da memoria
+RET                            #Retorna Para a Sub Rotina Limite
+Incrementa:                    #Label Incrementa
+STA @511                       #Reset do KEY0
+LDA @2                         #Carrega o valor da posicao 2 da memoria no Registrador
+SOMA @1                        #Soma o valor da posicao 1 da memoria com o valor do Registrador
+CEQ @10                        #Compara o valor do Registrador com 10
+JEQ @Dez                       #Se o valor do Registrador for 10, vai para a label Dez
+STA @2                         #Armazena o valor do Registrador na posicao 2 da memoria
+RET                            #Retorna Para a Sub Rotina Incrementa
+Dez:                           #Label Dez
+LDA @0                         #Carrega o valor da posicao 0 da memoria no Registrador
+STA @2                         #Armazena o valor do Registrador na posicao 2 da memoria
+LDA @3                         #Carrega o valor da posicao 3 da memoria no Registrador
+SOMA @1                        #Soma o valor da posicao 1 da memoria com o valor do Registrador
+CEQ @10                        #Compara o valor do Registrador com 10
+JEQ @Cen                       #Se o valor do Registrador for 10, vai para a label Cen
+STA @3                         #Armazena o valor do Registrador na posicao 3 da memoria
+RET                            #Retorna Para a Sub Rotina Incrementa
+Cen:                           #Label Cen
+LDA @0                         #Carrega o valor da posicao 0 da memoria no Registrador
+STA @3                         #Armazena o valor do Registrador na posicao 3 da memoria
+LDA @4                         #Carrega o valor da posicao 4 da memoria no Registrador
+SOMA @1                        #Soma o valor da posicao 1 da memoria com o valor do Registrador
+CEQ @10                        #Compara o valor do Registrador com 10
+JEQ @Mil                       #Se o valor do Registrador for 10, vai para a label Mil
+STA @4                         #Armazena o valor do Registrador na posicao 4 da memoria
+RET                            #Retorna Para a Sub Rotina Incrementa
+Mil:                           #Label Mil
+LDA @0                         #Carrega o valor da posicao 0 da memoria no Registrador
+STA @4                         #Armazena o valor do Registrador na posicao 4 da memoria
+LDA @5                         #Carrega o valor da posicao 5 da memoria no Registrador
+SOMA @1                        #Soma o valor da posicao 1 da memoria com o valor do Registrador
+CEQ @10                        #Compara o valor do Registrador com 10
+JEQ @DezM                      #Se o valor do Registrador for 10, vai para a label DezM
+STA @5                         #Armazena o valor do Registrador na posicao 5 da memoria
+RET                            #Retorna Para a Sub Rotina Incrementa
+DezM:                          #Label DezM
+LDA @0                         #Carrega o valor da posicao 0 da memoria no Registrador
+STA @5                         #Armazena o valor do Registrador na posicao 5 da memoria
+LDA @6                         #Carrega o valor da posicao 6 da memoria no Registrador
+SOMA @1                        #Soma o valor da posicao 1 da memoria com o valor do Registrador
+CEQ @10                        #Compara o valor do Registrador com 10
+JEQ @CenM                      #Se o valor do Registrador for 10, vai para a label CenM
+STA @6                         #Armazena o valor do Registrador na posicao 6 da memoria
+RET                            #Retorna Para a Sub Rotina Incrementa
+CenM:                          #Label CenM
+LDA @0                         #Carrega o valor da posicao 0 da memoria no Registrador
+STA @6                         #Armazena o valor do Registrador na posicao 6 da memoria
+LDA @7                         #Carrega o valor da posicao 7 da memoria no Registrador
+SOMA @1                        #Soma o valor da posicao 1 da memoria com o valor do Registrador
+CEQ @10                        #Compara o valor do Registrador com 10
+JEQ @Fim                       #Se o valor do Registrador for 10, vai para a label Fim
+STA @7                         #Armazena o valor do Registrador na posicao 7 da memoria
+RET                            #Retorna Para a Sub Rotina Incrementa
+Fim:                           #Label Fim
+LDA @0                         #Carrega o valor da posicao 0 da memoria no Registrador
+STA @7                         #Armazena o valor do Registrador na posicao 7 da memoria
+RET                            #Retorna Para a Sub Rotina Incrementa
+Comparador:                    #Label Comparador
+LDA @63                        #Carrega o valor da posicao 63 da memoria no Registrador
+CEQ @2                         #Compara o valor do Registrador com o valor da posicao 2 da memoria
+JEQ @CompDez                   #Se o valor do Registrador for igual ao valor da posicao 2 da memoria, vai para a label CompDez
+RET                            #Retorna Para a Sub Rotina Comparador
+CompDez:                       #Label CompDez
+LDA @62                        #Carrega o valor da posicao 62 da memoria no Registrador
+CEQ @3                         #Compara o valor do Registrador com o valor da posicao 3 da memoria
+JEQ @CompCen                   #Se o valor do Registrador for igual ao valor da posicao 3 da memoria, vai para a label CompCen
+RET                            #Retorna Para a Sub Rotina Comparador
+CompCen:                       #Label CompCen
+LDA @61                        #Carrega o valor da posicao 61 da memoria no Registrador
+CEQ @4                         #Compara o valor do Registrador com o valor da posicao 4 da memoria
+JEQ @CompMil                   #Se o valor do Registrador for igual ao valor da posicao 4 da memoria, vai para a label CompMil
+RET                            #Retorna Para a Sub Rotina Comparador
+CompMil:                       #Label CompMil
+LDA @60                        #Carrega o valor da posicao 60 da memoria no Registrador
+CEQ @5                         #Compara o valor do Registrador com o valor da posicao 5 da memoria
+JEQ @CompDezM                  #Se o valor do Registrador for igual ao valor da posicao 5 da memoria, vai para a label CompDezM
+RET                            #Retorna Para a Sub Rotina Comparador
+CompDezM:                      #Label CompDezM
+LDA @59                        #Carrega o valor da posicao 59 da memoria no Registrador
+CEQ @6                         #Compara o valor do Registrador com o valor da posicao 6 da memoria
+JEQ @CompCenM                  #Se o valor do Registrador for igual ao valor da posicao 6 da memoria, vai para a label CompCenM
+RET                            #Retorna Para a Sub Rotina Comparador
+CompCenM:                      #Label CompCenM
+LDA @58                        #Carrega o valor da posicao 58 da memoria no Registrador
+CEQ @7                         #Compara o valor do Registrador com o valor da posicao 7 da memoria
+JEQ @Acabou                    #Se o valor do Registrador for igual ao valor da posicao 7 da memoria, vai para a label Acabou
+RET                            #Retorna Para a Sub Rotina Comparador
+Acabou:                        #Label Acabou
+LDI @1                         #Carrega o valor 1 no Registrador
+STA @258                       #Ascende o LED 9
+STA @257                       #Ascende o LED 8
+LDI $255                       #Carrega o valor 255 no Registrador
+STA @256                       #Ascende os LEDs 7 a 0
+LDA @356                       #Carrega o valor do botao do Reset no Registrador
+CEQ @0                         #Compara o valor do Registrador com 0
+JEQ @Acabou                    #Se o valor do Registrador for 0, vai para a label Acabou
+JMP @Reset                     #Se o valor do Registrador for diferente de 0, vai para a label Reset

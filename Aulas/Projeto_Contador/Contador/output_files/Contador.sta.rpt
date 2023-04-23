@@ -1,5 +1,5 @@
 Timing Analyzer report for Contador
-Fri Apr 21 21:59:28 2023
+Sat Apr 22 15:06:30 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -102,20 +102,20 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 10          ;
 ;                            ;             ;
-; Average used               ; 1.89        ;
+; Average used               ; 1.87        ;
 ; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  11.3%      ;
-;     Processor 3            ;  10.9%      ;
-;     Processor 4            ;  10.8%      ;
-;     Processor 5            ;   9.5%      ;
-;     Processor 6            ;   9.4%      ;
-;     Processor 7            ;   9.4%      ;
-;     Processor 8            ;   9.4%      ;
-;     Processor 9            ;   9.4%      ;
-;     Processor 10           ;   9.3%      ;
+;     Processor 2            ;  10.8%      ;
+;     Processor 3            ;  10.7%      ;
+;     Processor 4            ;  10.4%      ;
+;     Processor 5            ;   9.2%      ;
+;     Processor 6            ;   9.2%      ;
+;     Processor 7            ;   9.2%      ;
+;     Processor 8            ;   9.2%      ;
+;     Processor 9            ;   9.2%      ;
+;     Processor 10           ;   9.2%      ;
 +----------------------------+-------------+
 
 
@@ -985,7 +985,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Apr 21 21:59:24 2023
+    Info: Processing started: Sat Apr 22 15:06:26 2023
 Info: Command: quartus_sta Contador -c Contador
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
@@ -1131,8 +1131,8 @@ Info (332146): Worst-case minimum pulse width slack is -0.611
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5163 megabytes
-    Info: Processing ended: Fri Apr 21 21:59:28 2023
+    Info: Peak virtual memory: 5160 megabytes
+    Info: Processing ended: Sat Apr 22 15:06:30 2023
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:06
 
