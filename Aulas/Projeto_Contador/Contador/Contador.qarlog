@@ -1,0 +1,30 @@
+Quartus Prime Archive log --	C:/Insper/6/DesComp/Projeto_Contador/Contador/Contador.qarlog
+
+Archive:	C:/Insper/6/DesComp/Projeto_Contador/Contador/Contador.qar
+Date:		Mon Apr 24 15:30:11 2023
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Insper/6/DesComp/Projeto_Contador/Contador/CPU.vhd
+C:/Insper/6/DesComp/Projeto_Contador/Contador/Contador.qpf
+C:/Insper/6/DesComp/Projeto_Contador/Contador/Contador.qsf
+C:/Insper/6/DesComp/Projeto_Contador/Contador/Contador.vhd
+C:/Insper/6/DesComp/Projeto_Contador/Contador/FlipFlop.vhd
+C:/Insper/6/DesComp/Projeto_Contador/Contador/ULASomaSub.vhd
+C:/Insper/6/DesComp/Projeto_Contador/Contador/buffer_3_state_8portas.vhd
+C:/Insper/6/DesComp/Projeto_Contador/Contador/conversorHex7Seg.vhd
+C:/Insper/6/DesComp/Projeto_Contador/Contador/decoder3x8.vhd
+C:/Insper/6/DesComp/Projeto_Contador/Contador/decoderInstru.vhd
+C:/Insper/6/DesComp/Projeto_Contador/Contador/edgeDetector.vhd
+C:/Insper/6/DesComp/Projeto_Contador/Contador/logicaDesvia.vhd
+C:/Insper/6/DesComp/Projeto_Contador/Contador/memoriaRAM.vhd
+C:/Insper/6/DesComp/Projeto_Contador/Contador/memoriaROM.vhd
+C:/Insper/6/DesComp/Projeto_Contador/Contador/muxGenerico2x1.vhd
+C:/Insper/6/DesComp/Projeto_Contador/Contador/muxGenerico4x1.vhd
+C:/Insper/6/DesComp/Projeto_Contador/Contador/registradorGenerico.vhd
+C:/Insper/6/DesComp/Projeto_Contador/Contador/somaConstante.vhd
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 19 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

@@ -202,7 +202,7 @@ display5 :  entity work.conversorHex7Seg
                  saida7seg => dis5);
 
 TST8: entity work.buffer_3_state_8portas
-        port map(entrada => SW(7 downto 0), habilita =>  habTS8, saida => dataIn);
+        port map(entrada => "0000" & SW(3 downto 0), habilita =>  habTS8, saida => dataIn);
 		
 TST10: entity work.buffer_3_state_8portas
         port map(entrada => "0000000" & SW(8), habilita =>  habTS10, saida => dataIn);
