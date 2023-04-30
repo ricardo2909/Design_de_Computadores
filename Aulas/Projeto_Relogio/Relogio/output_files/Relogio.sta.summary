@@ -1,0 +1,245 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -9.904
+TNS   : -4441.766
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.280
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|tick'
+Slack : -7.457
+TNS   : -7.457
+
+Type  : Slow 1100mV 85C Model Recovery 'FPGA_RESET_N'
+Slack : -4.708
+TNS   : -4.708
+
+Type  : Slow 1100mV 85C Model Recovery 'KEY[1]'
+Slack : -4.530
+TNS   : -4.530
+
+Type  : Slow 1100mV 85C Model Recovery 'KEY[0]'
+Slack : -4.522
+TNS   : -4.522
+
+Type  : Slow 1100mV 85C Model Removal 'KEY[1]'
+Slack : 1.352
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'KEY[0]'
+Slack : 1.455
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'FPGA_RESET_N'
+Slack : 1.484
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|tick'
+Slack : 4.813
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.538
+TNS   : -549.166
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'KEY[0]'
+Slack : -0.538
+TNS   : -1.015
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'KEY[1]'
+Slack : -0.538
+TNS   : -0.919
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|tick'
+Slack : -0.538
+TNS   : -0.838
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'FPGA_RESET_N'
+Slack : -0.538
+TNS   : -0.809
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -9.914
+TNS   : -4314.078
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.266
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|tick'
+Slack : -7.644
+TNS   : -7.644
+
+Type  : Slow 1100mV 0C Model Recovery 'FPGA_RESET_N'
+Slack : -4.903
+TNS   : -4.903
+
+Type  : Slow 1100mV 0C Model Recovery 'KEY[0]'
+Slack : -4.777
+TNS   : -4.777
+
+Type  : Slow 1100mV 0C Model Recovery 'KEY[1]'
+Slack : -4.695
+TNS   : -4.695
+
+Type  : Slow 1100mV 0C Model Removal 'KEY[1]'
+Slack : 1.466
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'KEY[0]'
+Slack : 1.570
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'FPGA_RESET_N'
+Slack : 1.603
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|tick'
+Slack : 4.851
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.551
+TNS   : -488.453
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'KEY[0]'
+Slack : -0.538
+TNS   : -1.042
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'KEY[1]'
+Slack : -0.538
+TNS   : -0.922
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|tick'
+Slack : -0.538
+TNS   : -0.823
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'FPGA_RESET_N'
+Slack : -0.538
+TNS   : -0.793
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -4.647
+TNS   : -2062.292
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : -0.079
+TNS   : -0.079
+
+Type  : Fast 1100mV 85C Model Recovery 'divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|tick'
+Slack : -3.550
+TNS   : -3.550
+
+Type  : Fast 1100mV 85C Model Recovery 'FPGA_RESET_N'
+Slack : -1.955
+TNS   : -1.955
+
+Type  : Fast 1100mV 85C Model Recovery 'KEY[1]'
+Slack : -1.805
+TNS   : -1.805
+
+Type  : Fast 1100mV 85C Model Recovery 'KEY[0]'
+Slack : -1.804
+TNS   : -1.804
+
+Type  : Fast 1100mV 85C Model Removal 'KEY[0]'
+Slack : 0.220
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'KEY[1]'
+Slack : 0.334
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'FPGA_RESET_N'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|tick'
+Slack : 2.107
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.622
+TNS   : -280.808
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'KEY[0]'
+Slack : -0.509
+TNS   : -1.611
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'KEY[1]'
+Slack : -0.492
+TNS   : -1.456
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'FPGA_RESET_N'
+Slack : -0.334
+TNS   : -1.075
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|tick'
+Slack : 0.046
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -4.155
+TNS   : -1793.483
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : -0.187
+TNS   : -0.203
+
+Type  : Fast 1100mV 0C Model Recovery 'divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|tick'
+Slack : -3.252
+TNS   : -3.252
+
+Type  : Fast 1100mV 0C Model Recovery 'FPGA_RESET_N'
+Slack : -1.714
+TNS   : -1.714
+
+Type  : Fast 1100mV 0C Model Recovery 'KEY[1]'
+Slack : -1.574
+TNS   : -1.574
+
+Type  : Fast 1100mV 0C Model Recovery 'KEY[0]'
+Slack : -1.569
+TNS   : -1.569
+
+Type  : Fast 1100mV 0C Model Removal 'KEY[0]'
+Slack : 0.195
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'KEY[1]'
+Slack : 0.300
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'FPGA_RESET_N'
+Slack : 0.342
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|tick'
+Slack : 2.006
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.655
+TNS   : -336.380
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'KEY[0]'
+Slack : -0.553
+TNS   : -1.775
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'KEY[1]'
+Slack : -0.541
+TNS   : -1.659
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'FPGA_RESET_N'
+Slack : -0.395
+TNS   : -1.316
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|tick'
+Slack : 0.065
+TNS   : 0.000
+
+------------------------------------------------------------
