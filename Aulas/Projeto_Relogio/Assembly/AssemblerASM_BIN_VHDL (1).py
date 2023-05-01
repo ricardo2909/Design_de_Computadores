@@ -173,6 +173,13 @@ def findLabel(file,new_file):
                         f.write(new_line + '\n')
                     else:
                         f.write(line)
+                else:
+                    jmp_split = line.split('@')
+                    if jmp_split[1].strip() in dic_labels:
+                        new_line = jmp_split[0] + '@' + dic_labels[jmp_split[1].strip()]
+                        f.write(new_line + '\n')
+                    else:
+                        f.write(line)
 
             elif ':' in line:
                 f.write('NOP\n')

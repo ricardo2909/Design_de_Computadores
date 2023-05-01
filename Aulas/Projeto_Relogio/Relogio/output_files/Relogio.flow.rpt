@@ -1,5 +1,5 @@
 Flow report for Relogio
-Fri Apr 28 15:31:34 2023
+Mon May 01 14:07:53 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri Apr 28 15:31:34 2023       ;
+; Flow Status                     ; Successful - Mon May 01 14:07:53 2023       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Relogio                                     ;
 ; Top-level Entity Name           ; Relogio                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 440 / 18,480 ( 2 % )                        ;
-; Total registers                 ; 627                                         ;
+; Logic utilization (in ALMs)     ; 426 / 18,480 ( 2 % )                        ;
+; Total registers                 ; 634                                         ;
 ; Total pins                      ; 68 / 224 ( 30 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/28/2023 15:25:06 ;
+; Start date & time ; 05/01/2023 14:06:15 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Relogio             ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 238300924722986.168270630514544        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 238300924722986.168296077504036        ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -106,12 +106,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 4926 MB             ; 00:00:32                           ;
-; Fitter               ; 00:05:53     ; 1.0                     ; 6777 MB             ; 00:08:30                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4829 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:08     ; 1.8                     ; 5163 MB             ; 00:00:11                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4726 MB             ; 00:00:01                           ;
-; Total                ; 00:06:24     ; --                      ; --                  ; 00:09:19                           ;
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4904 MB             ; 00:00:16                           ;
+; Fitter               ; 00:01:21     ; 1.1                     ; 6782 MB             ; 00:06:49                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4837 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.9                     ; 5161 MB             ; 00:00:06                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4726 MB             ; 00:00:01                           ;
+; Total                ; 00:01:34     ; --                      ; --                  ; 00:07:14                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
