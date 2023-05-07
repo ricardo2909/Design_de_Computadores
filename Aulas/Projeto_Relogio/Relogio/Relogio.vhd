@@ -82,6 +82,9 @@ architecture arquitetura of Relogio is
 	signal saidaLimpaKEY1: std_logic;
 	signal saidaLimpaRe: std_logic;
 	signal limpaTempo: std_logic;
+	signal tempoNormal: std_logic_vector(7 downto 0);
+	signal tempoRapido: std_logic_vector(7 downto 0);
+	
   
 
 begin
@@ -95,7 +98,6 @@ else generate
 detectorSub0: work.edgeDetector(bordaSubida)
         port map (clk => CLOCK_50, entrada => (not KEY(0)), saida => CLK);
 end generate;
-
 
 -- Falta acertar o conteudo da ROM (no arquivo memoriaROM.vhd)
 ROM1 : entity work.memoriaROM   generic map (dataWidth => 15, addrWidth => 9)
@@ -255,11 +257,19 @@ detectorRe: work.edgeDetector(bordaSubida)
         port map (clk => CLOCK_50, entrada => (not FPGA_RESET_N), saida => saidaEdge2);
 
 		  
-interfaceBaseTempo : entity work.divisorGenerico_e_Interface
+interfaceBase : entity work.divisorGenerico_e_Interface
               port map (clk => CLOCK_50,
               habilitaLeitura => habTempo,
               limpaLeitura => limpaTempo,
-              leituraUmSegundo => dataIn);
+              leituraUmSegundo => dataIn,
+				  seletor  => SW(9)
+				  );
+				  
+				  
+
+
+				  
+
 
 
 
