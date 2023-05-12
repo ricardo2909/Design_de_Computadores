@@ -1,0 +1,11 @@
+WIDTH=32;
+DEPTH=64;
+ADDRESS_RADIX=DEC;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+--endereco : dado;
+    0    :   014B4820; -- add t1, t2, t3
+    1    :   018B6822; -- sub t5, t4, t3
+	 [2..63]: 00000000;
+END;
